@@ -13,7 +13,7 @@ node {
 
         rtGradle = Artifactory.newGradleBuild()
         rtGradle.tool = GRADLE_TOOL // Tool name from Jenkins configuration
-        rtGradle.deployer repo: 'libs-dev-local', server: server
+        rtGradle.deployer repo: 'gradle-dev-local', server: server
         rtGradle.resolver repo: 'sb-read', server: server
         rtGradle.deployer.deployArtifacts = false // Disable artifacts deployment during Gradle run
         
